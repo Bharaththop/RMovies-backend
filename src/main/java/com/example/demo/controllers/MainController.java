@@ -23,7 +23,7 @@ public class MainController {
 	
 	
 	@PostMapping("/sendMail")
-	@CrossOrigin(origins={"https://r-movies-sepia.vercel.app/homepage","https://r-movies-sepia.vercel.app/homepage/contact-form"})
+	@CrossOrigin(origins={"https://r-movies-sepia.vercel.app","https://r-movies-sepia.vercel.app/homepage/contact-form"})
 	public ResponseEntity<Boolean> toSendEmail(@RequestBody FormData formData) {
 		boolean isSent=false;
 		String subject = "Data Submission from " + formData.getFirstName() + " " + formData.getLastName();
